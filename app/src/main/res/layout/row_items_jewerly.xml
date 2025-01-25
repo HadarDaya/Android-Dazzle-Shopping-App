@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="200dp"
+    android:layout_height="240dp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadingEdge="horizontal"
+        android:orientation="vertical"
+        android:padding="15dp"
+        android:textDirection="rtl">
+
+        <ImageView
+            android:id="@+id/row_item_image"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_gravity="center"
+            android:outlineProvider="none"
+            android:scaleType="centerCrop"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/row_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bevietnamproregular"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textColor="@color/rose_gold"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/row_item_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:fontFamily="@font/bevietnamproregular"
+            android:text="TextView"
+            android:textDirection="ltr"
+            android:textSize="10sp" />
+
+        <!-- Using FrameLayout to position the button and out of stock message on top of each other -->
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/row_item_out_of_stock_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:gravity="center"
+        android:text="Out Of Stock"
+        android:textColor="#A6A6A6"
+        android:textSize="11sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/row_item_add_to_cart_btn"
+        android:layout_width="27dp"
+        android:layout_height="35dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="bottom|center"
+        android:backgroundTint="@color/rose_gold"
+        android:clickable="true"
+        android:text="-"
+        app:cornerRadius="0dp"
+        app:icon="@drawable/shoppingcart"
+        app:iconGravity="textTop"
+        app:iconSize="18dp" />
+
+</androidx.cardview.widget.CardView>

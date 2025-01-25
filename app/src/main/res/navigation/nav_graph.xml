@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/entranceFragment">
+
+    <fragment
+        android:id="@+id/entranceFragment"
+        android:name="com.example.shoppingapp.fragment.EntranceFragment"
+        android:label="fragment_entrance"
+        tools:layout="@layout/fragment_entrance" >
+        <action
+            android:id="@+id/action_entranceFragment_to_registerationFragment"
+            app:destination="@id/registerationFragment" />
+        <action
+            android:id="@+id/action_entranceFragment_to_shoppingFragment"
+            app:destination="@id/shoppingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerationFragment"
+        android:name="com.example.shoppingapp.fragment.RegistrationFragment"
+        android:label="fragment_registeration"
+        tools:layout="@layout/fragment_registeration" >
+        <action
+            android:id="@+id/action_registerationFragment_to_shoppingFragment"
+            app:destination="@id/shoppingFragment" />
+        <action
+            android:id="@+id/action_registerationFragment_to_entranceFragment"
+            app:destination="@id/entranceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/shoppingFragment"
+        android:name="com.example.shoppingapp.fragment.ShoppingFragment"
+        android:label="fragment_shopping"
+        tools:layout="@layout/fragment_shopping" >
+        <action
+            android:id="@+id/action_shoppingFragment_to_entranceFragment"
+            app:destination="@id/entranceFragment" />
+        <action
+            android:id="@+id/action_shoppingFragment_to_userCartFragment"
+            app:destination="@id/userCartFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userCartFragment"
+        android:name="com.example.shoppingapp.fragment.UserCartFragment"
+        android:label="fragment_user_cart"
+        tools:layout="@layout/fragment_user_cart">
+        <action
+            android:id="@+id/action_userCartFragment_to_shoppingFragment"
+            app:destination="@id/shoppingFragment" />
+    </fragment>
+</navigation>

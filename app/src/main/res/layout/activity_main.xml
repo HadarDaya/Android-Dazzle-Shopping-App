@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:orientation="horizontal"
+        android:background="@color/rose_gold"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.7"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0">
+
+                <TextView
+                    android:id="@+id/logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:layout_weight="0"
+                    android:clickable="false"
+                    android:fontFamily="@font/cinzelvariablefontwght"
+                    android:gravity="center|left"
+                    android:paddingStart="0dp"
+                    android:text="DAZZLE"
+                    android:textColor="@color/white"
+                    android:textColorHighlight="@color/white"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp">
+
+                    <!-- Button on the right side -->
+                    <Button
+                        android:id="@+id/shoppingCartButton"
+                        android:layout_width="46dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:backgroundTint="@color/rose_gold"
+                        android:gravity="center"
+                        app:icon="@drawable/shoppingcart"
+                        app:iconSize="20dp" />
+
+                    <!-- TextView on the left of the Button -->
+                    <TextView
+                        android:id="@+id/welcomeMessage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_toStartOf="@id/shoppingCartButton"
+                        android:gravity="center_vertical|end"
+                        android:text="Hi, user!"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/logoutBtn"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:backgroundTint="@color/rose_gold"
+            android:gravity="center"
+            app:icon="@drawable/baseline_logout_24"
+            app:iconSize="20dp" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF">
+
+        <ImageView
+            android:id="@+id/headerImageView"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:background="@drawable/entrancebackground"
+            android:gravity="center"
+            android:orientation="vertical" />
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragmentContainerViewDefault"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:defaultNavHost="true"
+            app:navGraph="@navigation/nav_graph" />
+
+        <LinearLayout
+            android:id="@+id/menu_all"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            tools:visibility="visible">
+
+            <Button
+                android:id="@+id/menu_bracelets_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:backgroundTint="#FFFFFF"
+                android:gravity="center|top"
+                android:text="Bracelets"
+                android:textColor="@color/rose_gold"
+                android:textSize="14sp"
+                app:cornerRadius="0dp" />
+
+            <Button
+                android:id="@+id/menu_necklaces_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:backgroundTint="#FFFFFF"
+                android:gravity="center|top"
+                android:text="Necklaces"
+                android:textColor="@color/rose_gold"
+                android:textSize="14sp"
+                app:cornerRadius="0dp" />
+
+            <Button
+                android:id="@+id/menu_earrings_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:backgroundTint="#FFFFFF"
+                android:gravity="center|top"
+                android:text="Earrings"
+                android:textColor="@color/rose_gold"
+                android:textSize="14sp"
+                app:cornerRadius="0dp" />
+
+            <Button
+                android:id="@+id/menu_rings_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:backgroundTint="#FFFFFF"
+                android:gravity="center|top"
+                android:text="Rings"
+                android:textColor="@color/rose_gold"
+                android:textSize="14sp"
+                app:cornerRadius="0dp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>
